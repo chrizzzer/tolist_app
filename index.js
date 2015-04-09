@@ -31,8 +31,6 @@ $(function() {
 });
 
 
-
-
 function todoHTMLTemplate(todoItem, id) {
   var checked = "";
   if (todoItem.completed) {
