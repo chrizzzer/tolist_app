@@ -1,7 +1,36 @@
 $(function() {
   var todoItems = [];
   // TODO: Everything else
+
+  var firstTodo = {
+    name:'Do hm after js class', 
+    completed: false
+  }
+
+  todoItems.push(firstTodo);
+
+  var inputField = $('#new-todo');
+  inputField.keypress(function(ev){
+
+    if (ev.which === 13) {
+      todoItems.push({
+      name: inputField.val(),
+      completed: false
+      })
+    }
+    console.log(todoItems)
+
+  })
+
+  console.log("test")
+
+  
+
+
 });
+
+
+
 
 function todoHTMLTemplate(todoItem, id) {
   var checked = "";
