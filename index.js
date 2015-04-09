@@ -3,7 +3,7 @@ $(function() {
   // TODO: Everything else
 
   var firstTodo = {
-    name:'Do hm after js class', 
+    text:'Do hm after js class', 
     completed: false
   }
 
@@ -14,18 +14,19 @@ $(function() {
 
     if (ev.which === 13) {
       todoItems.push({
-      name: inputField.val(),
+      text: inputField.val(),
       completed: false
       })
+      var ul = $('todo-list');
+      ul.html(render(todoItems));
+      inputField.val("");
     }
+
     console.log(todoItems)
 
   })
 
   console.log("test")
-
-  
-
 
 });
 
